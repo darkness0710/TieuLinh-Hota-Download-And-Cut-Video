@@ -1,0 +1,30 @@
+# Hand-checked timestamps from the reference VOD
+# (YTDown...U197AGXIO3s_001_1080p.mp4, 2:48:19).
+# Format: seconds,keep|cut,description
+# These are the regression net for the cut rule. The combat entries matter most:
+# combat freezes BOTH clocks, so a rule of "Tieulinh clock frozen -> cut" turns
+# every one of them into a mismatch.
+9800,keep,combat tactics phase (START COMBAT)
+9820,keep,combat tactics phase
+9880,keep,combat
+2880,keep,combat (Archangels pause)
+3800,keep,combat on green field
+2865,keep,spell book open
+5820,keep,combat in the game with no timer
+5760,keep,tavern in the game with no timer
+5850,keep,level-up dialog
+6180,keep,hero screen
+6120,keep,town gate dialog
+1300,keep,combat during simultaneous turns
+2600,keep,map on Tieulinh turn
+3060,cut,HotA lobby room list
+3150,cut,HotA lobby room list
+6660,cut,HotA lobby with NEW GAME buttons
+5680,cut,map select menu
+5700,cut,map select menu
+4450,cut,reconnecting to the server dialog
+4500,cut,reconnecting to the server dialog
+20,cut,stream intro before the first game
+1120,cut,map while opponent clock runs
+2527,cut,map on opponent turn
+8880,cut,map while the opponent is in their own combat

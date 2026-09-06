@@ -1,0 +1,22 @@
+# Hand-checked timestamps from the second reference VOD
+# (Cam giac danh bulwark ... [drr0nVQwujU].mp4, 1:11:40).
+# Format: seconds,keep|cut,description
+#
+# This file exists because of one specific failure. The clock overlay is
+# semi-transparent, and while the opponent moves their hero the map scrolls
+# behind it, so the anti-aliased edge pixels of the frozen digits genuinely
+# change colour. Judging "is this clock running" by how MUCH changed kept
+# whole opponent turns: measured, a frozen clock reached 48 changed pixels
+# against a running one's 42. Neither a higher threshold, a tighter colour
+# window nor eroding the mask separated them. Regularity did -- a clock ticking
+# at 1 Hz changes in every one-second bin, scrolling map noise arrives in
+# bursts. If the first two entries below ever flip to "keep", that lesson has
+# been undone.
+20,cut,opponent turn with the map scrolling behind the clock
+50,cut,opponent turn, second instance of the same artefact
+300,cut,opponent turn
+120,keep,Tieulinh clock running
+3605,keep,PvP combat, both Spell Points panels up
+3640,keep,PvP combat with both clocks frozen
+4200,keep,no clock overlay, real play
+4290,keep,no clock overlay, real play

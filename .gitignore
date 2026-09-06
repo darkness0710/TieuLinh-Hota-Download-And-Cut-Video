@@ -1,0 +1,24 @@
+# VODs and renders are far too large to track
+input/
+output/
+*.mp4
+*.mkv
+*.ts
+*.flv
+
+# per-video scratch: signal cache, segment lists, rendered parts
+work/
+
+# machine-specific: rebuilt by setup.ps1, probed on first render
+.venv/
+.encoder.json
+
+__pycache__/
+*.pyc
+
+# deno, unpacked here by setup.ps1 when winget is unavailable
+.tools/
+
+# yt-dlp drops empty temp files in the working directory while solving
+# YouTube JavaScript, and cannot always delete them again
+tmp*.tmp
